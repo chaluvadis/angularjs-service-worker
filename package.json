@@ -1,0 +1,16 @@
+{
+  "name": "angularjs-service-worker",
+  "version": "1.0.0",
+  "description": "Simple Angular Js application with service worker",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "Surendra Chaluvadi <surendra.chaluvadi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.6.9",
+    "angular-resource": "1.6.9",
+    "angular-route": "1.6.9",
+    "angularfire": "2.3.0"
+  }
+}

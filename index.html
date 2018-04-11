@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="project">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular JS - Service Worker</title>
+    <base href="/">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/css/bootstrap-combined.min.css">
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="./node_modules/angular-route/angular-route.min.js"></script>
+    <script src="./node_modules/firebase/firebase.js"></script>
+    <script src="./node_modules/angularfire/dist/angularfire.min.js"></script>
+    <script type="text/javascript">
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js')
+                .then(function (registration) {
+                    console.log('Service Worker is registred', registration);
+                }).catch(function (err) {
+                    console.log('Service worker registration failed', err);
+                })
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>JavaScript Projects</h2>
+        <div data-ng-view></div>
+    </div>
+    <script src="./app/script/app.js"></script>
+    <script src="./app/script/data/project-list.js"></script>
+    <script src="./app/script/service/project-service.js"></script>
+    <script src="./app/script/controllers/project-list-controller.js"></script>
+    <script src="./app/script/controllers/edit-project-controller.js"></script>
+    <script src="./app/script/controllers/new-project-controller.js"></script>
+</body>
+
+</html>

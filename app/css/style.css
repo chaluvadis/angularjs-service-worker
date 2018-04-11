@@ -1,0 +1,11 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0
+}
+
+.container {
+    width: 80vw;
+    margin: 40px auto;
+}
